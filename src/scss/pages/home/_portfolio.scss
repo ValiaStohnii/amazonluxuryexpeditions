@@ -1,0 +1,260 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.portfolio {
+  $root: &;
+
+  overflow: hidden;
+  padding: 60px 0;
+  background-color: var(--color-orange-100);
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 16px;
+  }
+
+  &-slider {
+    width: 100%;
+    max-width: 920px;
+
+    .swiper-slide {
+      max-width: 295px;
+
+      img {
+        aspect-ratio: 4.85 / 8;
+      }
+
+      .portfolio__content {
+        display: none;
+      }
+
+      &-active {
+        order: -1;
+        width: 100%;
+        max-width: 400px;
+        opacity: 1;
+        visibility: visible;
+
+        .portfolio__content {
+          display: flex;
+        }
+
+        img {
+          aspect-ratio: unset;
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+
+    .portfolio__content {
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      margin-right: 0;
+      padding: 32px;
+      width: 100%;
+      max-width: 217px;
+      max-height: 130px;
+      background-color: var(--color-gray-150);
+      backdrop-filter: blur(2px);
+
+      p {
+        margin-bottom: 8px;
+        font-size: 16px;
+        text-indent: unset;
+      }
+
+      h3 {
+        font-size: 28px;
+      }
+
+      .btn {
+        position: absolute;
+        right: -48px;
+        bottom: 0;
+        z-index: 1;
+        padding: 10px;
+        width: auto;
+        min-width: auto;
+    
+        &::after {
+          right: 0;
+        }
+    
+        &--next {
+          &::before {
+            content: "";
+            width: 24px;
+            height: 24px;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.00006 5L16.0001 12L9.00006 19' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-size: 24px;
+            background-repeat: no-repeat;
+          }
+    
+          &:hover {
+            background-color: var(--color-gray-200);
+          }
+        }
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom: 16px;
+    letter-spacing: -0.8px;
+  }
+
+  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: unset;
+    bottom: 30px;
+    right: 23.7%;
+    left: unset;
+    z-index: 1;
+    position: absolute;
+    width: fit-content;
+
+    .swiper-pagination-bullet-active {
+      position: relative;
+      width: 11px;
+      height: 11px;
+      background-color: var(--color-orange-200);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -7px;
+        top: -7px;
+        border: 1px solid var(--color-orange-200);
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        background-color: transparent;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      margin: 0 10px 0 18px;
+      width: 11px;
+      height: 11px;
+    }
+  }
+
+  .swiper-scrollbar {
+    display: none;
+  }
+
+  .swiper-scrollbar-drag {
+    background-color: var(--color-pink);
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+
+    p {
+      margin-bottom: 25px;
+      text-indent: 23px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      padding: 12px 34px;
+      font-size: 16px;
+    }
+  }
+
+  @include media(desktop) {
+    img {
+      width: 100%;
+
+      &:last-child {
+        display: none;
+      }
+    }
+
+    &-slider {
+      max-width: 800px;
+    }
+
+    .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+      right: 10%;
+    }
+  }
+
+  @include media(tablet-wide) {
+    &-slider {
+      max-width: 600px;
+    }
+
+    .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+      right: 3.7%;
+    }
+  }
+
+  @include media(tablet) {
+    padding: 30px 0;
+
+    &__inner {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 16px;
+    }
+
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      margin-bottom: 20px;
+
+      .btn {
+        margin-top: auto;
+      }
+    }
+
+    .portfolio-slider .swiper-slide img {
+      aspect-ratio: 1/1;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__content {
+      flex-direction: column;
+    }
+  }
+
+  @include media(mobile-s) {
+    .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+      right: 3.7%;
+      bottom: -29px;
+    }
+  }
+}

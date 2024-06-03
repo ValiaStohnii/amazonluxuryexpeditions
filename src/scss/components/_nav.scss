@@ -1,0 +1,132 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    @include media(mobile-l) {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      flex-direction: column;
+      justify-content: flex-start;
+      overflow-y: auto;
+      padding-top: calc(var(--header-height) * 1.5);
+      width: 100%;
+      height: calc(var(--vh));
+      background-color: var(--color-pink-100);
+      transform: translateX(150%);
+      transition-property: transform;
+      transition-duration: 0.4s;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+
+    @include media(tablet-wide) {
+      margin: 0 auto;
+    }
+
+    @include media(mobile-l) {
+      z-index: -1;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-right: 39px;
+
+      @include media(tablet-wide) {
+        margin-right: 12px;
+      }
+
+      @include media(tablet) {
+        margin-right: 8px;
+      }
+
+      @include media(mobile-l) {
+        margin-right: 0;
+      }
+    }
+
+    @include media(mobile-l) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    font-weight: var(--fw-300);
+    font-style: var(--fs-italic);
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--color-black);
+    background-color: var(--color-pink);
+
+    &.true {
+      color: var(--color-orange-200);
+    }
+
+    @include media(tablet) {
+      letter-spacing: 0;
+    }
+  }
+
+  .btn {
+    border-radius: var(--radius-main);
+    padding: 10px 32px;
+    font-size: 20px;
+    line-height: 1.2;
+
+    &--simple {
+      margin-right: 32px;
+      padding: 10px 30px;
+      min-width: unset;
+    }
+
+    @include media(tablet-wide) {
+      padding: 8px 10px;
+      font-size: 16px;
+    }
+
+    @include media(mobile-l) {
+      margin: 0 auto;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      &.formsapp-popup-button {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .logo__img {
+    max-width: 291px;
+
+    @include media(tablet-wide) {
+      max-width: 200px;
+    }
+
+    @include media(tablet) {
+      max-width: 180px;
+    }
+
+    @include media(mobile-l) {
+      max-width: 200px;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Home"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+    <include src="./html/_header.html" locals='{"page": "home"}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero.html">
+        {
+          "title": "
+          Crafting Culinary Spaces with Style
+          ",
+          "text": "
+          Explore our expertise in outfitting cafes,  bars,  and restaurants with premium gear and furnishings
+          ",
+          "addClass": "home",
+          "btn": "Shop Now",
+          "image": "home"
+        }
+      </include>
+
+      <include src="./html/home/_crafting.html">
+        {
+          "span_a": "",
+          "text_a": "
+          Explore our expertise in outfitting cafes, bars, and restaurants with premium gear and furnishings
+          ",
+          "span_b": "",
+          "text_b": "
+          Let us handle the procurement process, sourcing top-quality gear and furnishings to elevate your establishment's aesthetic and functionality.
+          ",
+          "span_c": "",
+          "text_c": "
+          Our skilled team ensures seamless delivery, assembly, and installation of all equipment and furnishings, minimizing disruption to your operations.
+          ",
+          "span_d": "",
+          "text_d": "
+          Add unique personality to your space with our customization services, offering bespoke solutions to meet your specific needs and preferences.
+          "
+        }
+      </include>
+      
+      <include src="./html/home/_portfolio.html"></include>
+      
+      <div class="container">
+
+        <include src="./html/home/_help.html"></include>
+        <include src="./html/home/_reviews.html"></include>
+
+        <include src="./html/home/_request.html"></include>
+      </div>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

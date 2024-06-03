@@ -1,0 +1,58 @@
+/* stylelint-disable declaration-no-important */
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid transparent;
+  padding: 12px 32px;
+  width: 100%;
+  min-width: 100px;
+  max-width: fit-content;
+  font-weight: var(--fw-600);
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-white);
+  background-color: var(--color-orange-200);
+  transition-property: background-color, color, border-color;
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:not(.slick-arrow):focus {
+    color: var(--color-white);
+    background-color: var(--color-orange-150);
+  }
+
+  &.formsapp-popup-button {
+    margin: 0;
+    font-family: var(--font-family-primary);
+    font-size: 20px;
+    color: var(--color-white);
+    background-color: var(--color-orange-200);
+
+    &:hover,
+    &:focus {
+      color: var(--color-white);
+      background-color: var(--color-orange-150);
+    }
+  }
+
+  &--simple {
+    border-color: var(--color-orange-200);
+    color: var(--color-orange-200);
+    background-color: var(--color-white);
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+    }
+  }
+
+  @include media(mobile-l) {
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+}

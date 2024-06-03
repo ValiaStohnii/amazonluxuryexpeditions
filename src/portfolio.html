@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Portfolio"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+    <include src="./html/_header.html" locals='{"page": "portfolio"}'></include>
+
+    <main class="main">
+      <include src="./html/_hero.html">
+        {
+          "title": "
+          Delve Into Our Projects Portfolio
+          ",
+          "text": "
+          Discover our curated collection of captivating cafe, bar, and restaurant projects
+          ",
+          "addClass": "portfolio",
+          "btn": "Learn More",
+          "image": "portfolio"
+        }
+      </include>
+
+      <include src="./html/portfolio/_crafting.html"></include>
+
+      <div class="container">
+        <include src="./html/home/_reviews.html"></include>
+
+        <include src="./html/home/_request.html"></include>
+      </div>
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>
