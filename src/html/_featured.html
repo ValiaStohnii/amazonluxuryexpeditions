@@ -1,33 +1,64 @@
-<section class="featured" id="featured">
+<section class="featured featured--{{addClass}}" id="featured">
+  <div class="container featured__header">
+    <h2>
+      {{title}}
+    </h2>
+    <p>
+      {{text}}
+    </p>
+
+    <a class="btn btn--simple" href="portfolio.html">
+      {{buttonText}}
+    </a>
+  </div>
+
   <div class="featured-slider container">
     <ul class="featured__grid swiper-wrapper">
       <li class="featured__item swiper-slide">
-        <img src="./images/home/featured-us.jpeg" alt="featured Us" width="595" height="456">
+        <img src="./images/{{image}}/featured-1.jpeg" alt="{{title_a}}" width="688" height="403">
         <div class="featured__content">
-          <h2>
-            featured Us
-          </h2>
+          <h3>
+            {{title_a}}
+          </h3>
           <p>
-            At Amazon Luxury Expeditions, our mission is to provide unforgettable, sustainable travel experiences that showcase the breathtaking beauty and cultural richness of the Amazon Rainforest.        
+            {{text_a}}
           </p>
-          <a class="btn btn--link read-more-btn" href="portfolio.html">
-            Learn More
-          </a>
         </div>
       </li>
 
       <li class="featured__item swiper-slide">
-        <img src="./images/home/the-team.jpeg" alt="The Team" width="595" height="456">
+        <img src="./images/{{image}}/featured-2.jpeg" alt="{{title_b}}" width="688" height="403">
         <div class="featured__content">
-          <h2>
-            The Team
-          </h2>
+          <h3>
+            {{title_b}}
+          </h3>
           <p>
-            Meet our passionate team of experts dedicated to creating extraordinary adventures. Our guides and staff are committed to ensuring your journey is safe, enriching, and deeply connected to the environment and communities we visit.
+            {{text_b}}
           </p>
-          <a class="btn btn--link read-more-btn" href="portfolio.html">
-            Learn More
-          </a>
+        </div>
+      </li>
+
+      <li class="featured__item swiper-slide">
+        <img src="./images/{{image}}/featured-3.jpeg" alt="{{title_c}}" width="688" height="403">
+        <div class="featured__content">
+          <h3>
+            {{title_c}}
+          </h3>
+          <p>
+            {{text_c}}
+          </p>
+        </div>
+      </li>
+
+      <li class="featured__item swiper-slide {{hiddenClass}}">
+        <img src="./images/{{image}}/featured-4.jpeg" alt="{{title_d}}" width="688" height="403">
+        <div class="featured__content">
+          <h3>
+            {{title_d}}
+          </h3>
+          <p>
+            {{text_d}}
+          </p>
         </div>
       </li>
     </ul>

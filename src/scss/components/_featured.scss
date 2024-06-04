@@ -1,0 +1,137 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.featured {
+  $root: &;
+
+  position: relative;
+  overflow: hidden;
+  padding: 89px 0;
+  max-width: 100%;
+
+  h2 {
+    font-family: var(--font-family-secondary);
+    font-weight: var(--fw-700);
+    font-size: 40px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--color-green-200);
+  }
+
+  h3 {
+    color: var(--color-green-250);
+  }
+
+  p {
+    color: var(--color-black-150);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  &-slider {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {   /* Hide scrollbar for Chrome, Safari and Opera */
+      overflow-x: hidden;
+    }
+
+    &.container {
+      padding-right: 0;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+
+    &.swiper-slide-active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__grid {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    img {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      padding-right: 20px;
+      max-width: 329px;
+      color: var(--color-black-100);
+    }
+  }
+
+  .btn--simple {
+    padding: 11px 40px;
+    font-size: 16px;
+  }
+
+  &--home {
+    #{$root}__item {
+      &:nth-child(2) {
+        h3 {
+          color: var(--color-orange);
+        }
+      }
+    }
+  }
+
+  @include media(tablet) {
+    padding: rem(60) 0;
+
+    &__slider {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__slide {
+      display: block;
+      align-items: center;
+    }
+
+    &__image {
+      margin-bottom: 12px;
+      max-width: 500px;
+    }
+
+    &__content {
+      margin: 0 0 20px;
+      padding: 20px;
+      max-width: 500px;
+    }
+  }
+
+  @include media(mobile-m) {
+    &__btns {
+      display: none;
+    }
+
+    .swiper-scrollbar {
+      position: relative !important;
+      display: block;
+      margin-top: 16px;
+    }
+  }
+}

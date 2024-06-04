@@ -10,6 +10,20 @@ const swiperTeam = new Swiper('.about-slider', {
   },
 });
 
+const swiperFeatured = new Swiper('.featured-slider', {
+  direction: "horizontal",
+  slidesPerView: 2,
+  spaceBetween: 2,
+  mousewheel: true,
+});
+
+const swiperDiscover = new Swiper('.discover-slider', {
+  direction: "horizontal",
+  slidesPerView: 3,
+  spaceBetween: 2,
+  mousewheel: true,
+});
+
 const swiperPortfolio = new Swiper('.portfolio-slider', {
   slidesPerView: 1,
   spaceBetween: 20,

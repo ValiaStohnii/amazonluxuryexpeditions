@@ -28,8 +28,9 @@ h2 {
 }
 
 h3 {
-  font-weight: var(--fw-600);
-  font-size: clamp(16px, 2rem + 1vi, 24px);
+  font-family: var(--font-family-secondary);
+  font-weight: var(--fw-700);
+  font-size: clamp(16px, 2rem + 1vi, 26px);
 }
 
 p {
