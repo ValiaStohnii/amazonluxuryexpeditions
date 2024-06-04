@@ -1,20 +1,19 @@
 <section class="hero hero--{{addClass}}">
-  <div class="container">
-    <div class="hero__inner" style="background-image: url('./images/{{image}}/hero.jpeg');">
-      <div class="hero__content">
-        <h1>
-          {{title}}
-        </h1>
-        <div class="hero__{{addClass}}">
-          <button class="btn btn--request request-btn" type="button">
-            {{btn}}
-          </button>
-          
-          <p >
-            {{text}}
-          </p>
-        </div>
-      </div>
+  <div class="hero__image">
+    <img src='./images/{{image}}/hero.jpeg' alt="{{title}}" width="{{width_img}}" height="{{height_img}}" loading="lazy">
+  </div>
+
+  <div class="hero__content">
+    <h1>
+      {{title}}
+    </h1>
+    <div class="hero__{{addClass}}">
+      <p >
+        {{text}}
+      </p>
+      <button class="btn btn--request request-btn" type="button">
+        {{btn}}
+      </button>
     </div>
   </div>
 </section>

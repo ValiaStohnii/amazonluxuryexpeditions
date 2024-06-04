@@ -1,35 +1,60 @@
 <header class="header">
+  <div class="overlay"></div>
   <div class="container">
     <nav class="nav">
       <a class="logo" href="index.html">
-        <img class="logo__img" src="./images/logo.svg" alt="Shelter Crafters" width="271" height="36" loading="lazy">
+        <img class="logo__img" src="./images/logo.svg" alt="amazonluxuryexpeditions" width="123" height="29" loading="lazy">
       </a>
 
       <button class="burger" aria-label="Mobile menu" type="button"> <span></span> </button>
 
       <div class="nav__inner">
         <ul class="nav__list">
-          <li class="nav__item">
-            <a href="index.html" class="nav__link {{ page === 'home' }}">
-              Home
+          <li class="nav__item nav__item--menu">
+            <a href="index.html" class="nav__link {{ page === 'tours-excursions' }} nav__link--menu">
+              Tours & Excursions
             </a>
+
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="services.html" class="menu__link {{ page === 'services' }}">
+                  River Cruise
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="services.html" class="menu__link {{ page === 'services' }}">
+                  Cultural Immersion
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="services.html" class="menu__link {{ page === 'services' }}">
+                  Jungle Tour
+                </a>
+              </li>
+            </ul>
           </li>
 
           <li class="nav__item">
             <a href="services.html" class="nav__link {{ page === 'services' }}">
-              Services
+              Destinations
             </a>
           </li>
 
           <li class="nav__item">
             <a href="catalog.html" class="nav__link {{ page === 'catalog' }}">
-              Catalog
+              Wildlife & Nature
             </a>
           </li>
 
           <li class="nav__item">
             <a href="portfolio.html" class="nav__link {{ page === 'portfolio' }}">
-              Portfolio
+              Travel Tips
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="portfolio.html" class="nav__link {{ page === 'portfolio' }}">
+              About Us
             </a>
           </li>
         </ul>
@@ -38,8 +63,8 @@
           Sign Up
         </a>
 
-        <button class="btn btn--request request-btn" type="button" formsappId="66028b19e55f91b1478a0bca">
-          Make an Order
+        <button class="btn btn--simple request-btn" type="button" formsappId="66028b19e55f91b1478a0bca">
+          Explore Tours
         </button>
       </div>
     </nav>
@@ -48,7 +73,6 @@
 
 
 <script>
-
   const startHeightValue = () => {
     let vh = window.innerHeight * 1;
     document.querySelector(':root').style.setProperty('--vh', `${vh}px`);
@@ -67,4 +91,17 @@
   window.addEventListener('scroll', startHeightValue);
 
   startHeightValue();
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const navItem = document.querySelector('.nav__item--menu');
+    const overlay = document.querySelector('.overlay');
+
+    navItem.addEventListener('mouseenter', () => {
+      overlay.style.display = 'block';
+    });
+
+    navItem.addEventListener('mouseleave', () => {
+      overlay.style.display = 'none';
+    });
+  });
 </script>

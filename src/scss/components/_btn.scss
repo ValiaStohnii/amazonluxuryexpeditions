@@ -7,42 +7,43 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 2px solid transparent;
-  padding: 12px 32px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  padding: 20px 48px;
   width: 100%;
   min-width: 100px;
   max-width: fit-content;
-  font-weight: var(--fw-600);
-  font-size: 20px;
+  font-weight: var(--fw-400);
+  font-size: 23px;
   line-height: 1.2;
   color: var(--color-white);
-  background-color: var(--color-orange-200);
+  background-color: var(--color-green-200);
   transition-property: background-color, color, border-color;
   transition-duration: 0.2s;
 
   &:hover,
   &:not(.slick-arrow):focus {
     color: var(--color-white);
-    background-color: var(--color-orange-150);
+    background-color: var(--color-green-100);
   }
 
   &.formsapp-popup-button {
     margin: 0;
     font-family: var(--font-family-primary);
     font-size: 20px;
-    color: var(--color-white);
-    background-color: var(--color-orange-200);
+    color: var(--color-wite);
+    background-color: var(--color-green-200);
 
     &:hover,
     &:focus {
       color: var(--color-white);
-      background-color: var(--color-orange-150);
+      background-color: var(--color-green-100);
     }
   }
 
   &--simple {
-    border-color: var(--color-orange-200);
-    color: var(--color-orange-200);
+    border-color: var(--color-green-150);
+    color: var(--color-black);
     background-color: var(--color-white);
 
     &:hover,
