@@ -12,16 +12,27 @@ const swiperTeam = new Swiper('.about-slider', {
 
 const swiperFeatured = new Swiper('.featured-slider', {
   direction: "horizontal",
-  slidesPerView: 2,
+  slidesPerView: '2',
   spaceBetween: 2,
   mousewheel: true,
 });
 
 const swiperDiscover = new Swiper('.discover-slider', {
   direction: "horizontal",
-  slidesPerView: 3,
+  slidesPerView: 'auto',
   spaceBetween: 2,
   mousewheel: true,
+});
+
+const swiperTestimonials = new Swiper('.testimonials-slider', {
+  direction: "vertical",
+  slidesPerView: '1',
+  spaceBetween: 2,
+  modules: [Navigation, Pagination],
+  navigation: {
+    nextEl: '.testimonials .btn--next',
+    prevEl: '.testimonials .btn--prev',
+  },
 });
 
 const swiperPortfolio = new Swiper('.portfolio-slider', {

@@ -1,12 +1,12 @@
 @use "../utils/functions/"as*;
 @use "../utils/mixins/"as*;
 
-.featured {
+.testimonials {
   $root: &;
 
   position: relative;
   overflow: hidden;
-  padding: 89px 0;
+  padding: 100px 0;
   max-width: 100%;
 
   h2 {
@@ -15,39 +15,37 @@
     font-size: 40px;
     line-height: 1;
     text-transform: uppercase;
-    color: var(--color-green-200);
+    color: var(--color-gray-50);
+    text-indent: 34.6%;
+
+    span {
+      color: var(--color-green-200);
+    }
   }
 
   h3 {
-    color: var(--color-green-250);
+    color: var(--color-black-200);
+    line-height: 1.1;
+    margin-bottom: 7px;
   }
 
   p {
-    color: var(--color-black-150);
+    margin: 0 134px 0 auto;
+    max-width: 756px;
+    color: var(--color-black-50);
   }
 
   &__header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 32px;
+    display: none;
+    margin-bottom: 44px;
   }
 
-  &__container {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-    &::-webkit-scrollbar {   /* Hide scrollbar for Chrome, Safari and Opera */
-      overflow-x: hidden;
-    }
+  &__title {
+    display: flex;
   }
 
   &-slider {
     overflow: visible;
-
-    &.container {
-      padding-right: 0;
-    }
   }
 
   &__slide {
@@ -67,22 +65,37 @@
 
   &__item {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    max-height: 263px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-right: 60px;
 
     img {
-      margin-bottom: 13px;
+      height: fit-content;
+      border-radius: 8px;
+      margin-right: 20px;
     }
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
+    max-width: 415px;
+    padding: 44px 30px 44px 0;
+    border-top: 1px solid var(--color-gray-50);
+    border-bottom: 1px solid var(--color-gray-50);
+    height: 100%;
 
     p {
-      padding-right: 20px;
-      max-width: 329px;
+      margin: 0;
+      max-width: 289px;
       color: var(--color-black-100);
+    }
+
+    &:nth-child(2) {
+      padding: 43px 36px 44px 26px;
+      max-width: 431px;
+      border-left: 1px solid var(--color-gray-50);
     }
   }
 
@@ -92,12 +105,12 @@
   }
 
   &--home {
-    #{$root}__item {
-      &:nth-child(2) {
-        h3 {
-          color: var(--color-orange);
-        }
-      }
+    #{$root}__title {
+      display: none;
+    }
+
+    #{$root}__header {
+      display: block;
     }
   }
 
