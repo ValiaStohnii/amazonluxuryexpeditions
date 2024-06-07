@@ -75,6 +75,12 @@
     }
   }
 
+  &--tours-excursions {
+    img {
+      opacity: 0;
+    }
+  }
+
   @include media(tablet) {
     padding: 30px 15px;
 

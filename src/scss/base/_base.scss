@@ -43,6 +43,10 @@ body {
     }
   }
 
+  &--small {
+    max-width: 922px;
+  }
+
   &--power-black {
     .request {
       margin: 210px 0 90px;

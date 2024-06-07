@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Destinations"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+    <include src="./html/_header.html" locals='{"page": "destinations"}'></include>
+
+    <main class="main">
+      <div class="container">
+        <include src="./html/_hero.html">
+          {
+            "title": "
+            Discover the diverse ecosystems of the Amazon Rainforest
+            ",
+            "text": "
+            It’s time to enjoy unique locations and breathtaking scenery
+            ",
+            "addClass": "destinations",
+            "btn": "Discover Destinations",
+            "image": "destinations",
+            "width_img": "472",
+            "height_img": "606"
+          }
+        </include>
+      </div>
+
+      <include src="./html/_featured.html">
+        {
+          "addClass": "destinations",
+          "title": "FEATURED DESTINATIONS",
+          "text": "",
+          "buttonText": "",
+          "title_a": "Manu National Park",
+          "text_a": "
+          A biodiversity hotspot
+          ",
+          "image": "destinations",
+          "hiddenClass": "hidden",
+          "title_b": "Yasuni National Park",
+          "text_b": "
+          Rich in wildlife and indigenous culture
+          ",
+          "title_c": "Amazon River",
+          "text_c": "
+          Explore the lifeblood of the rainforest
+          ",
+          "title_d": "",
+          "text_d": ""
+        }
+      </include>
+
+      <div class="container container--small">
+        <include src="./html/destinations/_activities.html"></include>
+      </div>
+      
+      <div class="container">
+        <include src="./html/_testimonials.html">
+          {
+            "addClass": "about-us",
+            "title": "Customer Commitment",
+            "title_a": "Jessica Taylor",
+            "text_a": "An incredible adventure! The scenery was breathtaking, and every detail was perfectly organized.",
+            "image": "about-us",
+            "hiddenClass": "hidden",
+            "title_b": "Robert Chang",
+            "text_b": "A once-in-a-lifetime experience! The wildlife sightings were amazing, and the service was outstanding.",
+            "title_c": "Michael Davis",
+            "text_c": "The expedition was well-planned, and we felt truly immersed in the rainforest.Absolutely phenomenal!",
+            "title_d": "Emily Johnson",
+            "text_d": "The guides were knowledgeable (many hellos to Mary!), and the accommodations exceeded our expectations, an unforgettable journey."
+          }
+        </include>
+
+        <include src="./html/_additional.html">
+          {
+            "addClass": "destinations",
+            "text": "
+            Discover the Magic of the Amazon with Luxury Expeditions.
+            "
+          }
+        </include>
+
+        <include src="./html/home/_request.html">
+          {
+            "addClass": "tours-excursions"
+          }
+        </include>
+      </div>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

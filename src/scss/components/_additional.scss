@@ -7,6 +7,7 @@
   p {
     margin: 0 auto;
     width: fit-content;
+    max-width: 1135px;
     font-family: var(--font-family-secondary);
     font-weight: var(--fw-700);
     font-size: clamp(20px, 2rem + 1vi, 40px);
@@ -31,6 +32,7 @@
     p {
       display: flex;
       flex-direction: column;
+      max-width: unset;
       color: var(--color-black-100);
 
       &::before {
@@ -42,6 +44,26 @@
         background-size: contain;
         background-repeat: no-repeat;
       }
+    }
+  }
+
+  &--tours-excursions {
+    padding: 105px 0 60px;
+
+    p {
+      display: flex;
+      flex-direction: column;
+      max-width: unset;
+      text-indent: 135px;
+      color: var(--color-black-100);
+    }
+  }
+
+  &--destinations {
+    padding: 100px 0 60px;
+
+    p {
+      margin-left: 17.3%;
     }
   }
 
