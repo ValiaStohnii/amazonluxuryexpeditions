@@ -96,6 +96,18 @@
     font-size: 16px;
   }
 
+  &--about-us {
+    padding: 100px 0 0;
+
+    .btn {
+      display: none;
+    }
+
+    #{$root}__header {
+      margin-bottom: 60px;
+    }
+  }
+
   @include media(tablet) {
     padding: rem(60) 0;
 

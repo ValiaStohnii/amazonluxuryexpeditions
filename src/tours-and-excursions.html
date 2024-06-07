@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Tours and Excursions"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+    <include src="./html/_header.html" locals='{"page": "tours-and-excursions"}'></include>
+
+    <main class="main">
+      <div class="container">
+        <include src="./html/_hero.html">
+          {
+            "title": "
+            from jungle expeditions and river cruises to cultural immersions.
+            ",
+            "text": "
+            Each tour category offers unique experiences designed to highlight the best of the Amazon.
+            ",
+            "addClass": "tours-excursions",
+            "btn": "Book your Tour",
+            "image": "tours-excursions",
+            "width_img": "1360",
+            "height_img": "383"
+          }
+        </include>
+      </div>
+
+      <include src="./html/tours-excursions/_about-us.html"></include>
+
+      <include src="./html/tours-excursions/_divider.html"></include>
+
+      <include src="./html/tours-excursions/_tours.html"></include>
+      
+
+      <div class="container">
+        <include src="./html/tours-excursions/_faq.html"></include>
+      </div>
+      
+      <div class="container">
+
+        <include src="./html/tours-excursions/_additional.html"></include>
+
+        <include src="./html/home/_request.html">
+          {
+            "addClass": "tours-excursions"
+          }
+        </include>
+      </div>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

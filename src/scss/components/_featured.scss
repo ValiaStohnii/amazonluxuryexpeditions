@@ -101,6 +101,26 @@
     }
   }
 
+  &--about-us {
+    padding: 101px 0 0;
+    .btn {
+      display: none;
+    }
+
+    #{$root}__item {
+      h3 {
+        font-family: var(--font-family-secondary);
+        font-weight: var(--fw-700);
+        font-size: clamp(16px, 2rem + 1vi, 26px);
+      }
+      &:nth-child(3) {
+        h3 {
+          color: var(--color-orange);
+        }
+      }
+    }
+  }
+
   @include media(tablet) {
     padding: rem(60) 0;
 

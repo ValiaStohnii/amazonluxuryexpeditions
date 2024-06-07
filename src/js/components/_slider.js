@@ -27,11 +27,33 @@ const swiperDiscover = new Swiper('.discover-slider', {
 const swiperTestimonials = new Swiper('.testimonials-slider', {
   direction: "vertical",
   slidesPerView: '1',
-  spaceBetween: 2,
+  spaceBetween: 1,
   modules: [Navigation, Pagination],
   navigation: {
     nextEl: '.testimonials .btn--next',
     prevEl: '.testimonials .btn--prev',
+  },
+});
+
+const swiperFaq = new Swiper('.faq-slider', {
+  direction: "vertical",
+  slidesPerView: '1',
+  spaceBetween: 0,
+  modules: [Navigation, Pagination],
+  navigation: {
+    nextEl: '.faq .btn--next',
+    prevEl: '.faq .btn--prev',
+  },
+});
+
+const swiperValues = new Swiper('.values-slider', {
+  direction: "vertical",
+  slidesPerView: '1',
+  spaceBetween: 1,
+  modules: [Navigation, Pagination],
+  navigation: {
+    nextEl: '.values .btn--next',
+    prevEl: '.values .btn--prev',
   },
 });
 

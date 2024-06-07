@@ -36,7 +36,7 @@ h3 {
 p {
   font-family: var(--font-family-primary);
   font-weight: var(--fw-400);
-  font-size: 23px;
+  font-size: clamp(16px, 2rem + 1vi, 23px);
   line-height: 1.2;
   color: var(--color-black-50);
 }

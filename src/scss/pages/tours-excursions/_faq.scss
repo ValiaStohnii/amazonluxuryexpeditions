@@ -1,12 +1,13 @@
-@use "../utils/functions/"as*;
-@use "../utils/mixins/"as*;
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
 
-.testimonials {
+.faq {
   $root: &;
 
   position: relative;
+  display: flex;
   overflow: hidden;
-  padding: 100px 0;
+  padding: 96px 0;
   max-width: 100%;
 
   h2 {
@@ -16,17 +17,11 @@
     line-height: 1;
     text-transform: uppercase;
     color: var(--color-gray-50);
-    text-indent: 34.6%;
+    margin-right: 30px;
 
     span {
       color: var(--color-green-200);
     }
-  }
-
-  h3 {
-    color: var(--color-black-200);
-    line-height: 1.1;
-    margin-bottom: 7px;
   }
 
   p {
@@ -35,13 +30,12 @@
     color: var(--color-black-50);
   }
 
-  &__header {
-    display: none;
-    margin-bottom: 44px;
-  }
-
   &__title {
     display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 472px;
+    padding-right: 80px;
   }
 
   &-slider {
@@ -67,26 +61,27 @@
 
   &__item {
     display: flex;
-    max-height: 263px;
-    justify-content: flex-end;
     align-items: flex-start;
+    justify-content: flex-end;
     padding-right: 60px;
+    max-height: 263px;
 
     img {
-      height: fit-content;
-      border-radius: 8px;
       margin-right: 20px;
+      border-radius: 8px;
+      height: fit-content;
     }
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
-    max-width: 415px;
-    padding: 44px 30px 44px 0;
     border-top: 1.5px solid var(--color-gray-50);
     border-bottom: 1px solid var(--color-gray-50);
+    padding: 44px 30px 44px 0;
+    width: 100%;
     height: 100%;
+    max-width: 415px;
 
     p {
       margin: 0;
@@ -95,17 +90,17 @@
     }
 
     &:nth-child(2) {
+      border-left: 1px solid var(--color-gray-50);
       padding: 43px 36px 44px 26px;
       max-width: 431px;
-      border-left: 1px solid var(--color-gray-50);
     }
   }
 
-  .container--btns {
-    position: absolute;
-    right: 0;
-    bottom: 18%;
-  }
+  // .container--btns {
+  //   // position: absolute;
+  //   // right: 50%;
+  //   // top: 18%;
+  // }
 
   &__btns {
     display: flex;
@@ -117,6 +112,7 @@
       min-width: auto;
       background-color: transparent;
       opacity: 1;
+      padding: 0;
 
       &::after {
         right: 0;
@@ -137,8 +133,8 @@
 
         &::before {
           content: "";
-          width: 24px;
-          height: 24px;
+          width: 40px;
+          height: 40px;
           background-image: url("data:image/svg+xml,%3Csvg width='16' height='23' viewBox='0 0 16 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 1.36481C9 0.812522 8.55228 0.364807 8 0.364807C7.44772 0.364807 7 0.812522 7 1.36481H9ZM7.29289 22.0719C7.68342 22.4624 8.31658 22.4624 8.70711 22.0719L15.0711 15.708C15.4616 15.3174 15.4616 14.6843 15.0711 14.2937C14.6805 13.9032 14.0474 13.9032 13.6569 14.2937L8 19.9506L2.34315 14.2937C1.95262 13.9032 1.31946 13.9032 0.928932 14.2937C0.538408 14.6843 0.538408 15.3174 0.928932 15.708L7.29289 22.0719ZM7 1.36481L7 21.3648H9V1.36481H7Z' fill='%232C8469'/%3E%3C/svg%3E");
           background-size: contain;
           background-repeat: no-repeat;
@@ -150,8 +146,8 @@
       &--next {
         &::before {
           content: "";
-          width: 24px;
-          height: 24px;
+          width: 40px;
+          height: 40px;
           background-image: url("data:image/svg+xml,%3Csvg width='16' height='23' viewBox='0 0 16 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 1.36481C9 0.812522 8.55228 0.364807 8 0.364807C7.44772 0.364807 7 0.812522 7 1.36481H9ZM7.29289 22.0719C7.68342 22.4624 8.31658 22.4624 8.70711 22.0719L15.0711 15.708C15.4616 15.3174 15.4616 14.6843 15.0711 14.2937C14.6805 13.9032 14.0474 13.9032 13.6569 14.2937L8 19.9506L2.34315 14.2937C1.95262 13.9032 1.31946 13.9032 0.928932 14.2937C0.538408 14.6843 0.538408 15.3174 0.928932 15.708L7.29289 22.0719ZM7 1.36481L7 21.3648H9V1.36481H7Z' fill='%232C8469'/%3E%3C/svg%3E");
           background-size: contain;
           background-repeat: no-repeat;
@@ -169,41 +165,6 @@
   .btn--simple {
     padding: 11px 40px;
     font-size: 16px;
-  }
-
-  &--home {
-    #{$root}__title {
-      display: none;
-    }
-
-    #{$root}__header {
-      display: block;
-    }
-  }
-
-  &--about-us {
-    display: flex;
-
-    #{$root}__title {
-      max-width: 472px;
-      width: 100%;
-    }
-    
-    #{$root}__item {
-      padding-right: 69px;
-    }
-    
-    #{$root}__content {
-      padding: 28px 9px 44px 0;
-
-      &:nth-child(2) {
-        padding: 29px 50px 44px 11px;
-      }
-    }
-
-    h2 {
-      text-indent: unset;
-    }
   }
 
   @include media(tablet) {

@@ -67,6 +67,14 @@
     max-height: 324px;
   }
 
+  &--about-us {
+    padding: 80px 60px 99px;
+
+    img {
+      opacity: 0;
+    }
+  }
+
   @include media(tablet) {
     padding: 30px 15px;
 

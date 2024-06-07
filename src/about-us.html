@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "About Us"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+    <include src="./html/_header.html" locals='{"page": "about-us"}'></include>
+
+    <main class="main">
+      <div class="container">
+        <include src="./html/_hero.html">
+          {
+            "title": "
+            Welcome to Amazon Luxury Expeditions,
+            ",
+            "text": "
+            where our passion for the Amazon Rainforest drives us to offer the most unique and sustainable travel experiences.
+            ",
+            "addClass": "about-us",
+            "btn": "Learn more",
+            "image": "about-us",
+            "width_img": "820",
+            "height_img": "383"
+          }
+        </include>
+      </div>
+
+      <include src="./html/about-us/_about-us.html"></include>
+      
+      <include src="./html/_featured.html">
+        {
+          "addClass": "about-us",
+          "title": "MEET THE TEAM",
+          "text": "",
+          "buttonText": "",
+          "title_a": "John Martuzo",
+          "text_a": "
+          Expert Guide. With over 8 years of experience, John brings unparalleled knowledge and enthusiasm to every tour.
+          ",
+          "image": "about-us",
+          "hiddenClass": "",
+          "title_b": "Taylor Arnot",
+          "text_b": "
+          If you wonder who thinks for the smoothness of the tours (including accommodation, photos, safety), the answer is Taylor.
+          ",
+          "title_c": "Jessica Heery",
+          "text_c": "
+          Cultural Liaison. Jessica's deep connections with local communities ensure authentic cultural experiences.
+          ",
+          "title_d": "Maya Randles",
+          "text_d": "
+          Maya is an experienced river cruise guide and manager, who would help you feel the full spectrum of emotions from beauty and diversity of the Amazon River
+          "
+        }
+      </include>
+
+      <div class="container">
+        <include src="./html/about-us/_values.html"></include>
+      </div>
+
+      <include src="./html/_discover.html">
+        {
+          "addClass": "about-us",
+          "title": "ENVIRONmental Stewardship",
+          "text": "
+          We minimize our environmental footprint through sustainable tour operations, eco-friendly accommodations, and green transportation.
+          ",
+          "buttonText": "",
+          "image": "about-us",
+          "hiddenClass": ""
+        }
+      </include>
+      
+      <div class="container">
+        <include src="./html/_testimonials.html">
+          {
+            "addClass": "about-us",
+            "title": "Customer Commitment",
+            "title_a": "Jessica Taylor",
+            "text_a": "An incredible adventure! The scenery was breathtaking, and every detail was perfectly organized.",
+            "image": "about-us",
+            "hiddenClass": "",
+            "title_b": "Robert Chang",
+            "text_b": "A once-in-a-lifetime experience! The wildlife sightings were amazing, and the service was outstanding.",
+            "title_c": "Michael Davis",
+            "text_c": "The expedition was well-planned, and we felt truly immersed in the rainforest.Absolutely phenomenal!",
+            "title_d": "Emily Johnson",
+            "text_d": "The guides were knowledgeable (many hellos to Mary!), and the accommodations exceeded our expectations, an unforgettable journey."
+          }
+        </include>
+
+        <include src="./html/about-us/_additional.html"></include>
+
+        <include src="./html/home/_request.html">
+          {
+            "addClass": "about-us"
+          }
+        </include>
+      </div>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>
