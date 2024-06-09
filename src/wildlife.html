@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Wildlife"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+    <include src="./html/_header.html" locals='{"page": "wildlife"}'></include>
+
+    <main class="main">
+      <div class="container">
+        <include src="./html/_hero.html">
+          {
+            "title": "
+            The Amazon Rainforest is home to an extraordinary range of wildlife, plants, and ecosystems.
+            ",
+            "text": "",
+            "addClass": "wildlife",
+            "btn": "",
+            "image": "wildlife",
+            "width_img": "648",
+            "height_img": "383"
+          }
+        </include>
+      </div>
+      
+      <include src="./html/_featured.html">
+        {
+          "addClass": "wildlife",
+          "title": "FEATURED ANIMALS",
+          "text": "",
+          "buttonText": "",
+          "title_a": "Jaguar",
+          "text_a": "
+          Majestic predator of the rainforest
+          ",
+          "image": "wildlife",
+          "hiddenClass": "hidden",
+          "title_b": "Macaw",
+          "text_b": "
+          Vibrant and colorful bird.
+          ",
+          "title_c": "Anaconda",
+          "text_c": "
+          Giant snake of the Amazon.
+          ",
+          "title_d": "",
+          "text_d": ""
+        }
+      </include>
+
+      <div class="container">
+        <include src="./html/wildlife/_profiles.html"></include>
+
+        <include src="./html/wildlife/_values.html"></include>
+      </div>
+
+      <include src="./html/_discover.html">
+        {
+          "addClass": "about-us",
+          "title": "ENVIRONmental Stewardship",
+          "text": "
+          We minimize our environmental footprint through sustainable tour operations, eco-friendly accommodations, and green transportation.
+          ",
+          "buttonText": "",
+          "image": "about-us",
+          "hiddenClass": ""
+        }
+      </include>
+      
+      <div class="container">
+        <include src="./html/home/_request.html">
+          {
+            "addClass": "about-us"
+          }
+        </include>
+      </div>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

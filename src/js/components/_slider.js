@@ -17,6 +17,13 @@ const swiperFeatured = new Swiper('.featured-slider', {
   mousewheel: true,
 });
 
+const swiperFeaturedWildlife = new Swiper('.featured-slider--wildlife', {
+  direction: "horizontal",
+  slidesPerView: '2.74',
+  spaceBetween: 30,
+  mousewheel: true,
+});
+
 const swiperDiscover = new Swiper('.discover-slider', {
   direction: "horizontal",
   slidesPerView: 'auto',
@@ -55,6 +62,18 @@ const swiperValues = new Swiper('.values-slider', {
     nextEl: '.values .btn--next',
     prevEl: '.values .btn--prev',
   },
+});
+
+const swiperProfiles = new Swiper('.profiles-slider', {
+  slidesPerView: 1,
+  spaceBetween: 1,
+  modules: [Navigation, Pagination],
+  navigation: {
+    nextEl: '.profiles .btn--next',
+    prevEl: '.profiles .btn--prev',
+  },
+  draggable: true,
+  grabCursor: true,
 });
 
 const swiperPortfolio = new Swiper('.portfolio-slider', {

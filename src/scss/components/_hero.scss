@@ -204,29 +204,25 @@
     }
   }
 
-  &--services {
-    h1 {
-      margin-bottom: 45px;
+  &--wildlife {
+    display: flex;
+    padding: 104px 0 161px;
+
+    #{$root}__image {
+      margin-right: 40px;
     }
 
     #{$root}__content {
-      width: 100%;
-      max-width: 494px;
-      padding: 60px;
-    }
-  }
-
-  &--portfolio {
-    #{$root}__content {
-      width: 100%;
-      max-width: 494px;
-      padding: 60px;
-      align-items: flex-start;
+      max-width: 648px;
     }
 
     h1 {
-      width: 100%;
-      max-width: 300px;
+      line-height: 1.1;
+      color: var(--color-orange-100);
+    }
+
+    .btn {
+      display: none;
     }
   }
 
