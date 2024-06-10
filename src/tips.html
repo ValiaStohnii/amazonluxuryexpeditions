@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Tips"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+    <include src="./html/_header.html" locals='{"page": "tips"}'></include>
+
+    <main class="main">
+      <div class="container">
+        <include src="./html/_hero.html">
+          {
+            "title": "
+            What to expect 
+            ",
+            "span": "when traveling to the Amazon Rainforest",
+            "text": "",
+            "addClass": "tips",
+            "btn": "Explore",
+            "image": "tips",
+            "width_img": "660",
+            "height_img": "383"
+          }
+        </include>
+      </div>
+
+      <div class="container">
+        <include src="./html/tips/_tips-tab.html"></include>
+
+        <include src="./html/tips/_experience.html"></include>
+      </div>
+
+      <include src="./html/_discover.html">
+        {
+          "addClass": "tips",
+          "title": "",
+          "text": " ",
+          "buttonText": "",
+          "image": "tips",
+          "hiddenClass": ""
+        }
+      </include>
+
+      <div class="container">
+
+        <include src="./html/tips/_cultural.html"></include>
+
+        <include src="./html/tips/_responsible.html"></include>
+
+        <include src="./html/_additional.html">
+          {
+            "addClass": "tips",
+            "text": "
+            YOU ARE READY, DEAR FRIEND
+            "
+          }
+        </include>
+      
+        <include src="./html/home/_request.html">
+          {
+            "addClass": "wildlife"
+          }
+        </include>
+      </div>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

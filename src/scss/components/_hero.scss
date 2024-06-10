@@ -219,10 +219,51 @@
     h1 {
       line-height: 1.1;
       color: var(--color-orange-100);
+      overflow: visible;
     }
 
     .btn {
       display: none;
+    }
+  }
+
+  &--tips {
+    padding: 104px 0;
+    display: flex;
+    flex-direction: row-reverse;
+
+    #{$root}__content {
+      max-width: 660px;
+      align-items: start;
+      margin-right: 40px;
+    }
+
+    h1 {
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+
+      span {
+        color: var(--color-green-200);
+      }
+    }
+
+    #{$root}__tips {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .btn {
+        justify-content: center;
+        line-height: 1.2;
+        font-size: 23px;
+        margin-top: auto;
+
+        @include media(mobile-l) {
+          padding: 10px 15px;
+          font-size: 18px;
+        }
+      }
     }
   }
 

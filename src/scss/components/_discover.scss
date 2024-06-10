@@ -25,6 +25,10 @@
     color: var(--color-black-50);
   }
 
+  &__text {
+    display: none;
+  }
+
   &__header {
     margin-bottom: 20px;
   }
@@ -105,6 +109,78 @@
 
     #{$root}__header {
       margin-bottom: 60px;
+    }
+  }
+
+  &--wildlife {
+    padding: 120px 0 0;
+
+    .btn {
+      display: none;
+    }
+
+    h2 {
+      padding-left: 20px;
+      margin: unset;
+    }
+
+    #{$root}__header {
+      margin-bottom: 60px;
+
+      p {
+        margin-left: 18.8%;
+      }
+    }
+
+    #{$root}__item {
+      position: relative;
+      cursor: pointer;
+
+      &:hover .discover__text,
+      &:focus .discover__text {
+        cursor: pointer;
+        opacity: 1;
+        display: block;
+        background: var(--color-green-400);
+        display: flex;
+        transition-property: opacity, visibility;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+        text-indent: -20px;
+
+        @include media(tablet) {
+          opacity: 0;
+        }
+      }
+
+      .discover__text {
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        padding: 16px 4px 16px 25px;
+        margin: 0;
+        bottom: 0;
+        opacity: 0;
+        transition-property: opacity, visibility;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+        font-family: var(--font-family-primary);
+        font-weight: var(--fw-400);
+        font-size: clamp(16px, 2rem + 1vi, 23px);
+        color: var(--color-white);
+      }
+
+      img {
+        min-width: 472px!important;
+      }
+    }
+  }
+
+  &--tips {
+    padding: 42px 0 0;
+
+    .btn {
+      display: none;
     }
   }
 

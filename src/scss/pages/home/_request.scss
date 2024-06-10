@@ -81,6 +81,14 @@
     }
   }
 
+  &--wildlife {
+    padding: 80px 60px 79px;
+
+    img {
+      opacity: 0;
+    }
+  }
+
   @include media(tablet) {
     padding: 30px 15px;
 
