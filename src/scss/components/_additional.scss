@@ -10,7 +10,7 @@
     max-width: 1135px;
     font-family: var(--font-family-secondary);
     font-weight: var(--fw-700);
-    font-size: clamp(20px, 1.3459rem + 1.0458vi, 40px);
+    font-size: clamp(20px, 2.3459rem + 1.0458vi, 40px);
     line-height: 1;
     text-transform: uppercase;
     color: var(--color-green-200);
@@ -88,6 +88,7 @@
     padding: 30px 0;
 
     p {
+      font-size: clamp(20px, 1.3459rem + 1.0458vi, 40px);
       text-indent: 0;
     }
   }

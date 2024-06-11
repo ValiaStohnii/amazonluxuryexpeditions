@@ -12,7 +12,7 @@
     margin-bottom: 40px;
     font-family: var(--font-family-secondary);
     font-weight: var(--fw-700);
-    font-size: 40px;
+    font-size: clamp(20px, 1.3459rem + 1.0458vi, 40px);
     line-height: 1;
     text-transform: uppercase;
     color: var(--color-green-200);

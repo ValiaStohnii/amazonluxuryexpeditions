@@ -24,9 +24,24 @@ const swiperFeatured = new Swiper('.featured-slider', {
 
 const swiperFeaturedWildlife = new Swiper('.featured-slider--wildlife', {
   direction: "horizontal",
-  slidesPerView: '2.74',
-  spaceBetween: 30,
+  slidesPerView: '1.2',
+  spaceBetween: 10,
   mousewheel: true,
+  breakpoints: {
+    450: {
+      slidesPerView: 1.5
+    },
+    665: {
+      slidesPerView: 2.1
+    },
+    990: {
+      slidesPerView: 2.5
+    },
+    1230: {
+      slidesPerView: 2.74,
+      spaceBetween: 30
+    }
+  }
 });
 
 const swiperDiscover = new Swiper('.discover-slider', {

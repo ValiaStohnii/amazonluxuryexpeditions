@@ -201,6 +201,10 @@
             background-size: contain;
             rotate: (180deg);
             margin-right: 16px;
+
+            @include media(mobile-m) {
+              width: 100px;
+            }
           }
         }
   
@@ -220,6 +224,11 @@
             position: relative;
             top: 7px;
             margin-right: 16px;
+
+
+            @include media(mobile-m) {
+              width: 100px;
+            }
           }
         }
       }
@@ -227,6 +236,35 @@
   
     #{$root}__btn {
       margin: 0 auto;
+    }
+
+    @include media(tablet) {
+      #{$root}__item {
+        overflow: hidden;
+        
+        .container {
+          flex-direction: column;
+
+          p {
+            margin-bottom: 10px;
+            font-size: clamp(14px, 1.01rem + 0.6vi, 40px);
+          }
+        }
+
+        img {
+          margin: 0;
+          aspect-ratio: 16 / 7;
+        }
+      }
+
+      #{$root}__content {
+        border-right: 0;
+      }
+      
+      #{$root}__btns {
+        bottom: 5%;
+        right: 10%;
+      }
     }
   }
 
@@ -299,7 +337,7 @@
         min-width: auto;
         background-color: transparent;
         opacity: 1;
-        font-size: 28px;
+        font-size: clamp(16px, 1.1rem + 1.1vi, 28px);
         font-weight: var(--fw-400);
   
         &::after {

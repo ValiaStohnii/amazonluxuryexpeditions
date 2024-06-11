@@ -12,7 +12,6 @@
   h2 {
     font-family: var(--font-family-secondary);
     font-weight: var(--fw-700);
-    font-size: clamp(20px, 1.3459rem + 1.0458vi, 40px);
     line-height: 1;
     text-transform: uppercase;
     color: var(--color-gray-50);
@@ -187,6 +186,10 @@
     #{$root}__title {
       max-width: 472px;
       width: 100%;
+
+      h2 {
+        max-width: 290px;
+      }
     }
     
     #{$root}__item {
@@ -203,6 +206,23 @@
 
     h2 {
       text-indent: unset;
+    }
+
+    @include media(desktop) {
+      flex-direction: column;
+
+      #{$root}__title {
+        max-width: unset;
+        margin-bottom: 20px;
+
+        h2 {
+          max-width: unset;
+        }
+      }
+
+      #{$root}__item {
+        padding-right: 0;
+      }
     }
   }
 
@@ -233,6 +253,7 @@
 
     &__content {
       padding: 20px;
+      overflow: hidden;
 
       &:nth-child(2) {
         padding: 20px;
@@ -245,10 +266,6 @@
   @include media(mobile-m) {
     h2 {
       text-indent: 0;
-    }
-
-    &__btns {
-      display: none;
     }
 
     .swiper-scrollbar {

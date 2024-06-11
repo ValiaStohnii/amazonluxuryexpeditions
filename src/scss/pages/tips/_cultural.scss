@@ -47,5 +47,25 @@
 
   @include media(mobile-l) {
     padding: 30px 0;
+
+    h2 {
+      margin: 0 0 30px;
+    }
+
+    ul {
+      justify-content: flex-start;
+      padding-right: 0;
+
+      li {
+        width: 100%;
+        max-width: unset;
+
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 20px;
+          max-width: unset;
+        }
+      }
+    }
   }
 }
