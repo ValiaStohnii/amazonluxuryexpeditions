@@ -24,7 +24,7 @@
       padding-top: calc(var(--header-height) * 1.5);
       width: 100%;
       height: calc(var(--vh));
-      background-color: var(--color-pink-100);
+      background-color: var(--color-white);
       transform: translateX(150%);
       transition-property: transform;
       transition-duration: 0.4s;
@@ -42,6 +42,10 @@
       transition-duration: 0.2s;
       transition-timing-function: ease-in-out;
       pointer-events: none;
+
+      @include media(mobile-l) {
+        display: none!important;
+      }
     }
 
     &__item {
@@ -79,6 +83,12 @@
         z-index: 3;
         color: var(--color-white);
       }
+
+      @include media(mobile-l) {
+        .nav__link--menu {
+          color: var(--color-black-50);
+        }
+      }
     }
   }
 
@@ -86,6 +96,10 @@
     display: flex;
     align-items: center;
     margin: 0 107px 0 auto;
+
+    @include media(desktop) {
+      margin: 0 auto;
+    }
 
     @include media(tablet-wide) {
       margin: 0 auto;
@@ -116,6 +130,22 @@
 
     &:first-child {
       margin-right: 113px;
+
+      @include media(desktop) {
+        margin-right: 40px;
+      }
+
+      @include media(tablet-wide) {
+        margin-right: 12px;
+      }
+
+      @include media(tablet) {
+        margin-right: 8px;
+      }
+
+      @include media(mobile-l) {
+        margin-right: 0;
+      }
     }
 
     @include media(mobile-l) {
@@ -127,14 +157,14 @@
     font-weight: var(--fw-300);
     font-size: 16px;
     line-height: 1.8;
-    color: var(--color-black);
-    background-color: var(--color-pink);
+    color: var(--color-black-50);
 
     &.true {
       color: var(--color-gray-50);
     }
 
     @include media(tablet) {
+      font-size: 14px;
       letter-spacing: 0;
     }
   }
@@ -158,17 +188,26 @@
         color: var(--color-white)!important;
         background-color: var(--color-green-100);
       }
+
+      @include media(tablet-wide) {
+        padding: 8px 10px;
+        font-size: 14px;
+      }
     }
 
     &--simple {
       margin-right: 18px;
       padding: 12px 40px;
       min-width: unset;
+
+      @include media(tablet-wide) {
+        margin-right: 5px;
+      }
     }
 
     @include media(tablet-wide) {
       padding: 8px 10px;
-      font-size: 16px;
+      font-size: 14px;
     }
 
     @include media(mobile-l) {
@@ -196,7 +235,7 @@
     }
 
     @include media(tablet) {
-      max-width: 180px;
+      max-width: 115px;
     }
 
     @include media(mobile-l) {

@@ -20,7 +20,7 @@ button {
 
 h1 {
   font-family: var(--font-family-secondary);
-  font-size: clamp(24px, 2.2451rem + 1.0458vi, 50px);
+  font-size: clamp(24px, 2.3459rem + 1.0458vi, 50px);
 }
 
 h2 {
@@ -30,13 +30,13 @@ h2 {
 h3 {
   font-family: var(--font-family-primary);
   font-weight: var(--fw-400);
-  font-size: clamp(16px, 2rem + 1vi, 28px);
+  font-size: clamp(16px, 1.1rem + 1.1vi, 28px);
 }
 
 p {
   font-family: var(--font-family-primary);
   font-weight: var(--fw-400);
-  font-size: clamp(16px, 2rem + 1vi, 23px);
+  font-size: clamp(14px, 1.01rem + 0.6vi, 23px);
   line-height: 1.2;
   color: var(--color-black-50);
 }

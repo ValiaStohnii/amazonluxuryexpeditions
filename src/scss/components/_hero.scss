@@ -27,7 +27,7 @@
     }
   }
 
-  &--home{
+  &--home {
     display: flex;
     justify-content: center;
     padding: 104px 0 147px 128px;
@@ -47,13 +47,13 @@
 
     #{$root}__home {
       p {
-        font-size: 28px;
+        font-size: clamp(16px, 1rem + 1vi, 28px);
         margin-bottom: 58px;
         color: var(--color-black-100);
         line-height: 1.16;
 
-        @include media(mobile-l) {
-          font-size: 18px;
+        @include media(tablet) {
+          margin-bottom: 20px;
         }
       }
     
@@ -62,10 +62,35 @@
         line-height: 1.2;
         font-size: 23px;
 
+        &.formsapp-popup-button {
+          padding: 20px 55px;
+        }
+
+        @include media(tablet) {
+          padding: 11px 40px;
+          font-size: 16px;
+        }
         @include media(mobile-l) {
           padding: 10px 15px;
           font-size: 18px;
         }
+      }
+    }
+
+    @include media(tablet) {
+      flex-direction: column;
+      align-items: center;
+
+      #{$root}__content {
+        max-width: unset;
+      }
+
+      #{$root}__image {
+        margin-right: 0;
+      }
+
+      h1 {
+        margin-bottom: 10px;
       }
     }
   }
@@ -120,12 +145,23 @@
 
     h1 {
       margin-right: 32px;
+
+      @include media(tablet) {
+        margin-right: 0;
+        margin-bottom: 12px;
+      }
     }
 
     #{$root}__content {
       display: flex;
       flex-direction: row;
       margin-bottom: 40px;
+
+      @include media(tablet) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
     }
 
     #{$root}__tours-excursions {
@@ -148,9 +184,9 @@
         line-height: 1.2;
         font-size: 23px;
 
-        @include media(mobile-l) {
-          padding: 10px 15px;
-          font-size: 18px;
+        @include media(tablet) {
+          padding: 11px 40px;
+          font-size: 16px;
         }
       }
     }
@@ -200,6 +236,23 @@
           padding: 10px 15px;
           font-size: 18px;
         }
+      }
+    }
+
+    @include media(tablet) {
+      flex-direction: column;
+      align-items: center;
+
+      #{$root}__content {
+        max-width: unset;
+      }
+
+      #{$root}__image {
+        margin-right: 0;
+      }
+
+      h1 {
+        margin-bottom: 10px;
       }
     }
   }
@@ -267,29 +320,15 @@
     }
   }
 
-  @include media(tablet-wide) {
-    h1 {
-      font-size: clamp(2.5rem, 2.2451rem + 1.0458vi, 3.5rem);
-    }
-  }
-
   @include media(tablet) {
-    padding: 0;
+    padding: 30px 0;
 
-    &__inner {
-      min-height: 526px;
-      padding: 10px 0;
+    h1 {
+      font-size: clamp(24px, 1.3459rem + 1.0458vi, 50px);
     }
 
     &__content {
-      max-width: 440px;
       max-height: unset;
-      padding: 30px;
-    }
-
-    &__container {
-      padding: 40px 0;
-      flex-direction: column;
     }
 
     img {
@@ -302,15 +341,12 @@
       padding-top: 10px;
     }
 
-    &__inner {
-      min-height: 500px;
-      padding: 60px 10px;
-      background-size: cover;
+    &__content {
+      padding: 20px 0 0;
     }
 
     h1 {
       margin-bottom: 20px;
-      font-size: 36px;
     }
 
     p {

@@ -25,7 +25,7 @@
     margin-bottom: 32px;
     font-family: var(--font-family-inter);
     font-weight: var(--fw-500);
-    font-size: 28px;
+    font-size: clamp(20px, 1.3459rem + 1.0458vi, 28px);
     line-height: 1.16;
     color: var(--color-green-200);
   }
@@ -89,6 +89,14 @@
     }
   }
 
+  &--policy {
+    padding: 80px 0;
+
+    img {
+      opacity: 0;
+    }
+  }
+
   @include media(tablet) {
     padding: 30px 15px;
 
@@ -110,13 +118,12 @@
       margin-bottom: 20px;
       font-size: 16px;
     }
-
-    h2 {
-      font-size: clamp(20px, 3rem + 1vi, 56px);
-    }
   }
 
   @include media(mobile-l) {
+    flex-direction: column-reverse;
+    align-items: center;
+
     &__form {
       margin-right: 0;
       width: 100%;
@@ -125,6 +132,15 @@
 
     p {
       max-width: unset;
+    }
+
+    img {
+      display: none;
+    }
+
+    .btn {
+      padding: 11px 40px;
+      font-size: 16px;
     }
   }
 

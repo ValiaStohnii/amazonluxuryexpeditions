@@ -7,7 +7,7 @@
     margin-bottom: 12px;
     font-family: var(--font-family-secondary);
     font-weight: var(--fw-700);
-    font-size: 40px;
+    font-size: clamp(20px, 1.3459rem + 1.0458vi, 40px);
     line-height: 1.2;
     color: var(--color-black-100);
   }
@@ -65,7 +65,7 @@
 
     p {
       margin: 0;
-      font-size: 28px;
+      font-size: clamp(16px, 1.1rem + 1.1vi, 28px);
       color: var(--color-black-100);
     }
 
@@ -101,7 +101,40 @@
   }
 
   @include media(tablet) {
-    padding: rem(60) 0;
+    padding: 30px 0;
+
+    &__item {
+      .container {
+        flex-direction: column;
+      }
+
+      .tours__title {
+        margin-bottom: 10px;
+        max-width: unset;
+      }
+
+      .tours__content {
+        max-width: unset;
+      }
+    }
+
+    &__overview {
+      margin-bottom: 20px;
+
+      p {
+        padding-left: 0;
+        width: auto;
+        max-width: unset;
+      }
+    }
+
+    &__title {
+      padding: 10px 0;
+
+      p {
+        margin-bottom: 20px;
+      }
+    }
   }
 
   @include media(mobile-l) {

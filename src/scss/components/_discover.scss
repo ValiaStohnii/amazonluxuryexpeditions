@@ -13,16 +13,24 @@
     margin: 0 auto 0 235px;
     font-family: var(--font-family-secondary);
     font-weight: var(--fw-700);
-    font-size: 40px;
+    font-size: clamp(20px, 1.3459rem + 1.0458vi, 40px);
     line-height: 1;
     text-transform: uppercase;
     color: var(--color-green-50);
+
+    @include media(tablet) {
+      margin: 0;
+    }
   }
 
   p {
     margin: 0 134px 0 auto;
     max-width: 756px;
     color: var(--color-black-50);
+
+    @include media(tablet) {
+      margin: 0;
+    }
   }
 
   &__text {
@@ -198,15 +206,12 @@
       align-items: center;
     }
 
-    &__image {
-      margin-bottom: 12px;
-      max-width: 500px;
+    &__title {
+      align-items: center;
     }
 
-    &__content {
-      margin: 0 0 20px;
-      padding: 20px;
-      max-width: 500px;
+    img {
+      aspect-ratio: 16 / 7;
     }
   }
 
